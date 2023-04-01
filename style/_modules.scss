@@ -1,0 +1,99 @@
+//Google font
+
+// Body
+body {
+    background-color: gc(03);
+    position: relative;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+// General
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    // outline: 1px solid yellow;
+}
+h1 {
+    font-size: 30px;
+    color: gc(02);
+}
+h2 {
+    font-size: 28px;
+    color: gc(02);
+}
+h3 {
+    font-size: 20px;
+    color: gc(02);
+}
+p {
+    font-size: 16px;
+    color: gc(02);
+}
+
+//Variable
+$colors:(
+    01: #000000,
+    02: #FFFFFF,
+    03: #002B5B,
+    04: #2B4865,
+    05: #8FE3CF,
+    06: #4b6d65
+);
+
+// Function
+@function gc($key){
+    @return map-get($colors, $key);
+}
+
+// Mixin
+@mixin mobile{
+    @media (max-width: 501.1px){
+        @content;
+    }
+}
+@mixin landscape{
+    @media (max-width: 701.1px){
+        @content;
+    }
+}
+@mixin tablet{
+    @media (max-width: 980.1px){
+        @content;
+    }
+}
+
+// Animation
+@keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fade-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
