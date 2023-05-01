@@ -405,6 +405,15 @@ p {
   transition: all 0.4s ease;
   margin-right: 10px;
 }
+#links a:first-child {
+  animation: fade-up 0.8s 0.2s backwards;
+}
+#links a:nth-child(2) {
+  animation: fade-up 1.2s 0.2s backwards;
+}
+#links a:nth-child(3) {
+  animation: fade-up 1.6s 0.2s backwards;
+}
 #links a:hover {
   transform: scale(1.15);
 }
