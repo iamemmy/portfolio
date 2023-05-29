@@ -1,0 +1,699 @@
+@import "module";
+
+//** Home **//
+
+.nav-hero-wrap {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6) ), url("/media/bg-overlay.jpg");
+    background-position: unset;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .navbar{
+        padding: 20px 30px;
+        display: flex;
+        justify-content: space-between;
+        a {
+            font-size: 30px;
+            color: getColor(color02);
+            animation: fade-down 0.8s 0.2s backwards;
+        }
+        #toggler{
+            border: none;
+            background-color: transparent;
+            color: getColor(color02);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 18px;
+            display: none;
+            &:active {
+                box-shadow: 0 0 10px 0 getColor(color05);
+            }
+            @include tablet {
+                display: inline-block;
+                &.close {
+                    position: absolute;
+                    top: -27px;
+                    left: -10px;
+                    background-color: transparent;
+                    color: getColor(color02);
+                }
+            }
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            gap: 30px;
+            @include tablet {
+                background-color: getColor(color01);
+                opacity: 0.96;
+                padding: 20px;
+                padding-top: 45px;
+                position: fixed;
+                flex-direction: column;
+                gap: 40px;
+                justify-content: flex-start;
+                height: 100vh;
+                top: 0;
+                right: 0;
+                width: 250px;
+                transition: margin-right .4s ease;
+                margin-right: -260px;
+                &.show {
+                    margin-right: 0;
+                }
+            }
+            li {
+                @include tablet {
+                    &:first-child {
+                        position: relative;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 16px;
+                    @include tablet {
+                        color: getColor(color02);
+                    }
+                }
+                &:nth-child(2) {
+                    animation: fade-down 0.8s 0.2s backwards;
+                }
+                &:nth-child(3) {
+                    animation: fade-down 0.8s 0.5s backwards;
+                }
+                &:nth-child(4) {
+                    animation: fade-down 0.8s 0.8s backwards;
+                }
+            }
+        }
+    }
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 30px;
+        @include mobile {
+            flex-direction: column;
+            gap: 20px;
+        }
+        .content {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 10px;
+            p {
+                color: getColor(color02);
+                &:first-child {
+                    font-size: 20px;
+                    animation: fade-up 0.8s 0.2s backwards;
+                    @include mobile {
+                        font-size: 18px; 
+                    }
+                }
+                &:nth-child(2) {
+                    font-size: 40px;
+                    animation: fade-up 0.8s 0.4s backwards;
+                    @include mobile {
+                        font-size: 30px;
+                    }
+                    span {
+                        color: getColor(color06);
+                    }
+                }
+                &:nth-child(3) {
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                    animation: fade-up 0.8s 0.6s backwards;
+                    @include mobile {
+                        font-size: 18px; 
+                    }
+                }
+                &:nth-child(4) {
+                    font-size: 20px;
+                    font-weight: 500;
+                    animation: fade-up 0.8s 0.8s backwards;
+                    @include mobile {
+                        font-size: 18px; 
+                    }
+                }
+                &:nth-child(5) {
+                    font-size: 15px;
+                    margin-bottom: 20px;
+                    line-height: 25px;
+                    animation: fade-up 0.8s 1s backwards;
+                    @include mobile {
+                        font-size: 14px; 
+                    }
+                }
+            }
+            a {
+                text-decoration: none;
+                padding: 10px 20px;
+                background-color: getColor(color06);
+                color: getColor(color04);
+                transition: all .3s ease;
+                border-radius: 2px;
+                animation: fade-up 0.8s 2s backwards;
+                &:hover {
+                    background-color: getColor(color02);
+                }
+            }
+        }
+        .content-img {
+            flex: 1;
+            border-radius: 20px;
+            border: 1px solid getColor(color05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 80%;
+                animation: fade-in 1.5s 0.2s backwards;
+                @include mobile {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    background-color: getColor(color02);
+    @include mobile {
+        flex-direction: column-reverse;
+    }
+    .about-1 {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include tablet {
+            flex: 1;
+        }
+        img {
+            width: 100%;
+            border-radius: 20px 0 20px 0;
+            animation: fade-in 1.5s 0.2s backwards;
+        }
+    }
+    .about-2 {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 20px;
+        @include tablet {
+            flex: 1;
+        }
+        h3 {
+            color: getColor(color03);
+            font-size: 26px;
+            animation: fade-up 0.8s 0.8s backwards;
+        }
+        p {
+            color: getColor(color01);
+            font-size: 15px;
+            line-height: 25px;
+            animation: fade-up 0.8s 1s backwards;
+            @include mobile {
+                font-size: 14px; 
+            }
+            @include tablet {
+                line-height: 20px;
+            }
+        }
+    }
+}
+.experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    padding: 30px;
+    h3 {
+        color: getColor(color03);
+        font-size: 26px;
+    }
+    .experience-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        @include mobile {
+            flex-direction: column;
+        }
+        div {
+            padding: 20px 40px;
+            width: 33.3%;
+            height: 40vh;
+            border: 1px solid getColor(color03);
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 10px;
+            transition-delay: 300ms;
+            box-shadow: rgba(0, 0, 0, 1%) 0px 19px 38px, rgba(0, 0, 0, 10%) 0px 15px 12px;
+            &:nth-child(2) {
+                transition-delay: 600ms;
+                @include mobile {
+                    transition-delay: 400ms;
+                }
+            }
+            &:nth-child(3) {
+                transition-delay: 900ms;
+                @include mobile {
+                    transition-delay: 600ms;
+                }
+            }
+            @include mobile {
+                width: 100%;
+                padding: 10px 30px;
+                height: 25vh;
+                transition-delay: 200ms;
+            }
+            p {
+                color: getColor(color01);
+                &:first-child {
+                    font-size: 30px;
+                    font-weight: bold;
+                    @include mobile {
+                        font-size: 25px;
+                    }
+                }
+                &:nth-child(2) {
+                    font-size: 25px;
+                    @include mobile {
+                        font-size: 20px;
+                    }
+                }
+                &:nth-child(3) {
+                    font-size: 16px;
+                    margin-top: 60px;
+                    @include mobile {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+.skills {
+    padding: 30px;
+    background-color: getColor(color02);
+    color: getColor(color01);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 50vh;
+    @include mobile {
+        flex-direction: column;
+    }
+    .skills-1 {
+        flex: 1;
+        p {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: getColor(color03);
+        }
+        h3 {
+            font-size: 26px;
+            color: getColor(color03);
+        }
+    }
+    .skills-2 {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        padding-top: 20px;
+        div {
+            p {
+                font-size: 20px;
+                @include mobile {
+                    font-size: 16px;
+                    margin-bottom: 8px;
+                }
+            }
+            .outter-div {
+                height: 10px;
+                background-color: getColor(color02);
+                width: 420px;
+                border-radius: 20px;
+                overflow: hidden;
+                border: 1px solid getColor(color03);
+                @include tablet {
+                    height: 8px;
+                }
+                @include mobile {
+                    width: 320px;
+                    height: 6px;
+                }
+                .inner-div {
+                    height: 10px;
+                    background-color: getColor(color03);
+                    z-index: 999;
+                    border-radius: 20px;
+                    @include tablet {
+                        height: 8px;
+                    }
+                    @include mobile {
+                        height: 6px;
+                    }
+                }
+            }
+        }
+    }
+}
+.portfolio {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    // background-color: getColor(color06);
+    background-image: url(/media/project.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include mobile {
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 20px;
+    }
+    .portfolio-img {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 70%;
+            border-radius: 20px;
+            @include tablet {
+                width: 90%;
+            }
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+    .portfolio-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 10px;
+            p {
+                font-size: 18px;
+                margin-bottom: 15px;
+                color: getColor(color03);
+            }
+            h3 {
+                font-size: 26px;
+                color: getColor(color03);
+            }
+            a {
+                margin-top: 40px;
+                text-decoration: none;
+                padding: 10px 20px;
+                background-color: getColor(color03);
+                color: getColor(color02);
+                transition: all .3s ease;
+                border-radius: 5px;
+                &:hover {
+                    background-color: getColor(color01);
+                }
+            }
+        }
+    }
+}
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 40px;
+    min-height: 40vh;
+    width: 100%;
+    padding: 30px;
+    color: getColor(color03);
+    p {
+        font-size: 22px;
+        line-height: 33px;
+        @include mobile {
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 8px;
+        p {
+            font-size: 18px;
+            @include mobile {
+                font-size: 16px;
+            }
+        }
+        small {
+            font-size: 14px;
+            @include mobile {
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+.reach {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 100px;
+    min-height: 50vh;
+    width: 100%;
+    padding: 30px;
+    background-color: getColor(color01);
+    color: getColor(color02);
+    @include mobile {
+        gap: 50px;
+    }
+    h3 {
+        font-size: 26px;
+    }
+    .reach-content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        @include mobile {
+            flex-direction: column;
+            gap: 20px;
+            width: initial;
+        }
+        .content-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+            @include mobile {
+                gap: 10px;
+            }
+            h3 {
+                font-size: 26px;
+                color: getColor(color06);
+            }
+            p {
+                font-size: 22px;
+                line-height: 33px;
+                @include mobile {
+                    font-size: 14px;
+                    line-height: 25px;
+                }
+            }
+        }
+        .content-social {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 20px;
+            padding-right: 60px;
+            width: 22%;
+            @include tablet {
+                width: 32%;
+            }
+            @include mobile {
+                width: 100%;
+                gap: 10px;
+            }
+            p {
+                font-size: 22px;
+                line-height: 33px;
+                white-space: nowrap;
+                @include mobile {
+                    font-size: 14px;
+                    line-height: 25px;
+                }
+            }
+            div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                a {
+                    img {
+                        width: 30px;
+                    }
+                }
+            }
+            .view-r {
+                text-decoration: none;
+                padding: 10px 20px;
+                background-color: getColor(color06);
+                color: getColor(color04);
+                transition: all .3s ease;
+                border-radius: 2px;
+                width: 100%;
+                text-align: center;
+                white-space: nowrap;
+                &:hover {
+                    background-color: getColor(color02);
+                }
+            }
+        }
+    }
+    small {
+        display: none;
+        @include mobile {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+    }
+}
+
+//** Portfolio **//
+
+.portfolio-hero {
+    min-height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 30px;
+    h3 {
+        font-size: 40px;
+        color: getColor(color02);
+        @include mobile {
+            font-size: 30px;
+        }
+        span {
+            color: getColor(color06);
+        }
+    }
+}
+.my-works {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 30px;
+    @include mobile {
+        padding: 20px;
+    }
+    h3 {
+        color: getColor(color03);
+        font-size: 26px;
+        text-align: start;
+        width: 100%;
+    }
+    .works-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 15px;
+        row-gap: 30px;
+        @include tablet {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 20px;
+        }
+        @include mini-mobile {
+            grid-template-columns: 1fr;
+        }
+        .work {
+            padding: 0;
+            box-shadow: 0 0 10px 0 getColor(color05);
+            border: 1px solid getColor(color05);
+            border-radius: 6px;
+            overflow: hidden;
+            width: 100%;
+            div {
+                width: 100%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    cursor: pointer;
+                    object-fit: 1/1;
+                    transition: all .3s ease;
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+                &:nth-child(2) {
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+                    gap: 10px;
+                    p {
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: getColor(color03);
+                        &:nth-child(2) {
+                            font-size: 16px;
+                            font-weight: initial;
+                            color: getColor(color01);
+                        }
+                    }
+                    a {
+                        text-decoration: none;
+                        color: getColor(color04);
+                        transition: all .3s ease;
+                        &:hover {
+                            color: getColor(color03);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
