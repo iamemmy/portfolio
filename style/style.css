@@ -847,7 +847,7 @@
   transform: scale(1.05);
 }
 .my-works .works-wrapper .work div:nth-child(2) {
-  padding: 10px;
+  padding: 20px 10px 30px 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -868,7 +868,12 @@
   text-decoration: none;
   color: #0046b6;
   transition: all 0.3s ease;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 10px;
 }
 .my-works .works-wrapper .work div:nth-child(2) a:hover {
   color: #002F7B;
+  background-color: #8fdaeb;
 }/*# sourceMappingURL=style.css.map */

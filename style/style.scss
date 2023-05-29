@@ -668,7 +668,7 @@
                     }
                 }
                 &:nth-child(2) {
-                    padding: 10px;
+                    padding: 20px 10px 30px 10px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -688,8 +688,13 @@
                         text-decoration: none;
                         color: getColor(color04);
                         transition: all .3s ease;
+                        border: 1px solid getColor(color01);
+                        border-radius: 4px;
+                        padding: 8px;
+                        margin-top: 10px;
                         &:hover {
                             color: getColor(color03);
+                            background-color: getColor(color06);
                         }
                     }
                 }
